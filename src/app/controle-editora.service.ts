@@ -6,9 +6,8 @@ import { Editora } from './editora';
 })
 export class ControleEditoraService {
   private editoras: Editora[] = [
-    { codEditora: 1, nome: 'Companhia das Letras' },
-    { codEditora: 2, nome: 'HarperCollins' },
-    { codEditora: 3, nome: 'Globo Livros' }
+    { codEditora: 1, nome: 'Alta Books' },
+    { codEditora: 2, nome: 'Novatec' }
   ];
 
   getEditoras(): Editora[] {

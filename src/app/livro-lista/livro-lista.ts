@@ -5,6 +5,7 @@ import { ControleEditoraService } from '../controle-editora.service';
 
 @Component({
   selector: 'app-livro-lista',
+  standalone: false,  
   templateUrl: './livro-lista.html'
 })
 export class LivroLista implements OnInit {
