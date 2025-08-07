@@ -10,22 +10,15 @@ export class ControleLivrosService {
       codigo: 1,
       codEditora: 1,
       titulo: 'Angular para Iniciantes',
-      resumo: 'Um guia prático de Angular',
-      autores: ['João da Silva']
+      resumo: 'Um guia completo sobre Angular.',
+      autores: ['Fulano da Silva', 'Beltrano de Souza']
     },
     {
       codigo: 2,
       codEditora: 2,
-      titulo: 'TypeScript Moderno',
-      resumo: 'Aprendendo com exemplos',
-      autores: ['Maria Oliveira']
-    },
-    {
-      codigo: 3,
-      codEditora: 3,
-      titulo: 'CSS para Desenvolvedores',
-      resumo: 'Layout e Design Responsivo',
-      autores: ['Carlos Souza']
+      titulo: 'TypeScript na Prática',
+      resumo: 'Aprenda TS do zero ao avançado.',
+      autores: ['Ciclano Lima']
     }
   ];
 
@@ -34,17 +27,11 @@ export class ControleLivrosService {
   }
 
   incluir(livro: Livro): void {
-    const novoCodigo = this.livros.length > 0
-      ? Math.max(...this.livros.map(l => l.codigo)) + 1
-      : 1;
-    livro.codigo = novoCodigo;
+    livro.codigo = this.livros.length + 1;
     this.livros.push(livro);
   }
 
   excluir(codigo: number): void {
-    const index = this.livros.findIndex(l => l.codigo === codigo);
-    if (index !== -1) {
-      this.livros.splice(index, 1);
-    }
+    this.livros = this.livros.filter(livro => livro.codigo !== codigo);
   }
 }

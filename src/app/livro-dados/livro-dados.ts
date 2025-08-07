@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-livro-dados',
+  standalone: false,
   templateUrl: './livro-dados.html'
 })
 export class LivroDados implements OnInit {

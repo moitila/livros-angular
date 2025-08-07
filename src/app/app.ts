@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-import { AppComponent } from './app';
+import { AppComponent } from './root/root';
 import { LivroLista } from './livro-lista/livro-lista';
 import { LivroDados } from './livro-dados/livro-dados';
 import { ControleEditoraService } from './controle-editora.service';
